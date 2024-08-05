@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Problems</title>
+  </head>
+  <body>
+    <h1>Array Problems</h1>
+    <script>
+      // 1.Convert array into object
+      var arr = ["a", "b", "c", "d", "e", "f"];
+      var obj = {};
+      for (var i = 0; i < arr.length; i++) {
+        obj[arr[i]] = arr[i];
+      }
+      console.log("Convert array into object : ", obj);
+
+      // 2.removing array item by index
+      var arr1 = ["a", "b", "c", "d", "e", "f"];
+      arr1.splice(3, 1);
+      console.log("Removing array item by index : ", arr1);
+
+      // 3.Insert item at specific position
+      const arr2 = ["a", "b", "c", "d", "e", "f"];
+      arr2.splice(4, 0, "g");
+      console.log("Insert item at specific position : ", arr2.join());
+
+      //4.Sorting array with complex object
+      const arr3 = [
+        { name: "John", age: 25 },
+        { name: "Steve", age: 30 },
+        { name: "Jack", age: 20 },
+        { name: "Michalle", age: 35 },
+      ];
+      arr3.sort((a, b) => a.age - b.age);
+      console.log("Sorting array with complex object : ", arr3);
+
+      //.5 Longest string in an array
+      const arr4 = [
+        "John",
+        "Mike",
+        "Smith",
+        "Marcus",
+        "David",
+        "Andrew",
+        "Hamza",
+      ];
+      let maxel = arr4[0].length;
+      for (var j = 0; j < arr4.length; j++) {
+        if (arr4[j].length > maxel) {
+          maxel = arr4[j].length;
+          var idx = j;
+        }
+      }
+      console.log("Longest string in an array : ", arr4[idx]);
+    </script>
+  </body>
+</html>
